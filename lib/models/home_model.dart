@@ -44,4 +44,9 @@ class MovieItem {
     this.director = Director.fromMap(json["directors"][0]);
     this.originalTitle = json["original_title"];
   }
+
+  @override
+  String toString() {
+    return 'MovieItem{rank: $rank, imageURL: $imageURL, title: $title, playDate: $playDate, rating: $rating, genres: $genres, casts: $casts, director: $director, originalTitle: $originalTitle}';
+  }
 }

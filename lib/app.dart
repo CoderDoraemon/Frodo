@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
           // 去除tabbar点击选中波纹效果
-          highlightColor: Color.fromRGBO(0, 0, 0, 0),
+          highlightColor: Colors.transparent,
           splashColor: Color.fromRGBO(0, 0, 0, 0),
       ),
       home: LDMainScreen()

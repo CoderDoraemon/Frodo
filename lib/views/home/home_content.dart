@@ -1,4 +1,5 @@
 import 'package:Frodo/models/home_model.dart';
+import 'package:Frodo/utils/log.dart';
 import 'package:flutter/material.dart';
 import 'package:Frodo/api/home_request.dart';
 import 'package:Frodo/components/content/movie_list_item.dart';
@@ -18,6 +19,8 @@ class _LDHomeContentState extends State<LDHomeContent> {
     super.initState();
 
     getMovieTopList(false);
+    
+    FLog("-----------");
   }
 
   void getMovieTopList(isPull) {
@@ -33,6 +36,8 @@ class _LDHomeContentState extends State<LDHomeContent> {
         _start += 1;
       });
     });
+
+    FLog(movies);
   }
 
   @override
@@ -40,7 +45,6 @@ class _LDHomeContentState extends State<LDHomeContent> {
     return Container(
       child: ListView.builder(
           itemCount: movies.length,
-          itemExtent: 100,
           itemBuilder: (BuildContext ctx, int index) {
             return LDMovieListItem(movies[index]);
           }),
