@@ -7,6 +7,9 @@ import '../subject/subject.dart';
 import '../profile/profile.dart';
 
 class LDMainScreen extends StatefulWidget {
+
+  static const String routerName = "/";
+
   @override
   _LDMainScreenState createState() => _LDMainScreenState();
 }
