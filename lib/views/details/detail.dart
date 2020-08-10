@@ -11,7 +11,6 @@ class LDDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     FLog(this._imageUrl);
 
     return WillPopScope(
@@ -20,15 +19,21 @@ class LDDetail extends StatelessWidget {
         // true: 可以自动返回；flase: 自行写返回
         return Future.value(false);
       },
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text("详情"),
-          // 第一种自定义返回
+      child: Theme(
+        data: Theme.of(context).copyWith(
+          primaryColor: Colors.pink
+        ),
+        child: Scaffold(
+
+          appBar: AppBar(
+            title: Text("详情"),
+            // 第一种自定义返回
 //        leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: () {
 //          Navigator.of(context).pop();
 //        }),
+          ),
+          body: LDDetailContent(_imageUrl),
         ),
-        body: LDDetailContent(_imageUrl),
       ),
     );
   }

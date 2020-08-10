@@ -1,5 +1,6 @@
 import 'package:Frodo/utils/log.dart';
 import 'package:Frodo/views/details/detail.dart';
+import 'package:Frodo/views/profile/profile.dart';
 import 'package:flutter/material.dart';
 
 class LDDetailContent extends StatefulWidget {
@@ -37,7 +38,7 @@ class _LDDetailContentState extends State<LDDetailContent> {
               child: Text("跳转"),
               onPressed: () {
                 Navigator.of(context)
-                    .pushNamed(LDDetail.routerName, arguments: "1213");
+                    .pushNamed(LDProfile.routerName, arguments: "1213");
               }),
           FloatingActionButton(
               heroTag: "返回",
